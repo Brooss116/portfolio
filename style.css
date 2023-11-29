@@ -1,9 +1,11 @@
 body{
-    background-color: gray;
+    background-color: #1d1d20;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;
+    color : #d1d1d1;
+    padding : 10vh 20px
 }
 
 
@@ -12,12 +14,7 @@ div{
 }
 
 
-.main{
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    padding-left: 10vw;
-    padding-right: 10vw;
-}
+
 
 .inner::before{
     content:'';
@@ -50,21 +47,22 @@ div{
 .inner{
     
     position: relative;
-    background-color: #f1f1f1;
+    background-color: #1d1d20 ;
     align-self: center; 
-    border-radius: 0.5rem;    
-    width: 80vw;
-    
+    border-radius: 0.5rem;  
     flex-direction: column;
-    padding : 0 2em ;.  
-
-    
+    padding : 0 0 ;  
 
 }
 
 h1{
-    font-size: 5vw;
-    color: #333;
+    font-size: 6vw;
+    font-weight: 200;
+}
+
+h2{
+    font-size: 2em;
+    font-weight: 200;
 }
 
 .col{
@@ -76,16 +74,31 @@ h1{
 
 .text{
     font-size: 1.5rem;
-    color: #333;
     flex-direction: column;
-    padding-left: 5vw;
-    border-left: solid linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    padding-left: 3vw;
+    border-left: solid rgba(0,212,255,1);
+    font-size : 1rem;
 }
 
 a{
     text-decoration: none;
-    color :black
+    color: #d1d1d1;
+    transition: all 0.1s ease-in-out;
 
+}
+
+a img{
+    width: 50px;
+    height:50px;
+}
+
+a img:hover{
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
+}
+a:hover{
+    font-size: larger;
+    
 }
 
 .reseaux{
@@ -98,15 +111,43 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding-right: ;
-
 
 }
 
 li{
     list-style-type: none;
+    overflow: hidden;
+    
 }
+
+
 .reseaux li{
-    list-style-type: none ;
+    padding: 0 1em;
+}
+
+
+.top{
+    
+    overflow: hidden;
+}
+
+.projects_list{
+    overflow: hidden;
+}
+
+.bottom{
+    display: flex;
+    justify-content: right;
+}
+
+.projects_list li{
+    position : relative ;
+}
+
+.projects_list li::after{
+    position : absolute;
+    height: 10px;
+    background-color: red;
+    z-index: 5;
+    bottom: -50px;
 }
